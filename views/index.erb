@@ -15,12 +15,41 @@
       background-position: top center;
       color:white;
     }
+
+    .game {
+      width: 33%;
+      margin: 10em auto;
+      text-align: center
+    }
+
+    .just-right .game{
+      background: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      color: black;
+      padding: 10px 50px;
+    }
+    input[type="text"] {
+      margin-right: 0em;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid black;
+      border-right:none;
+      padding: 10px;
+    }
+
+    input[type="submit"]{
+      padding: 10;
+      border: 1px solid black;
+      border-radius: 0 5px 5px 0;
+      background: white;
+    }
   </style>
 </head>
 <body class="<%= classname %>">
-  <h2><%= message %></h2>
-  <form action="/"><input type="text" name="guess"><input type="submit" value="Guess!"></form>
-  <p><%= guesses_left %></p>
-  <p><%= cheat_mode %></p>
+  <div class="game">
+    <h2><%= message %></h2>
+    <form action="/"><input type="text" name="guess"><input type="submit" value="Guess!"></form>
+    <p><%= guesses_left %></p>
+    <p><%= cheat_mode %></p>
+  </div>
 </body>
 </html>
