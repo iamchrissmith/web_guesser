@@ -1,7 +1,24 @@
 <html>
-<head></head>
-<body>
-  <p><%= message %></p>
+<head>
+  <style>
+    body[class^="way-too-"] {
+      background-color: #ff0000;
+      color: white;
+    }
+    body[class^="too-"] {
+      background-color: #ffb3b3
+    }
+    .just-right {
+      background-image: url('http://bestanimations.com/Holidays/Fireworks/fireworks/ba-awesome-colorful-fireworks-animated-gif-image-s.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      color:white;
+    }
+  </style>
+</head>
+<body class="<%= classname %>">
+  <h2><%= message %></h2>
   <form action="/"><input type="text" name="guess"><input type="submit" value="Guess!"></form>
 </body>
 </html>
